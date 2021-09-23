@@ -28,7 +28,7 @@ public final class KnightGenerator {
             new File(FILE_KNIGHT), SCANNER_CHARSET)) {
             knightScanner.useDelimiter(TEXT_FILE_DELIMITER);
             knight = new Knight();
-            while (knightScanner.hasNext()) {
+            while (knightScanner.hasNextLine()) {
                 String wordInFirstColumn = knightScanner.next();
                 if (wordInFirstColumn.equals(SWORD)) {
                     int weight = knightScanner.nextInt();

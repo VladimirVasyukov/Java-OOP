@@ -65,7 +65,7 @@ public class ConsoleView {
     }
 
     public void printAmmunitionElement(Ammunition element) {
-        System.out.println(element.toString());
+        System.out.println(element);
     }
 
     public void printAmmunitionTypeRequest() {

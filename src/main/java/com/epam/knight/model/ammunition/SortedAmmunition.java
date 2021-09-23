@@ -6,7 +6,7 @@ import com.epam.knight.model.ammunition.comparator.WeightComparator;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class SortAmmunition {
+public class SortedAmmunition {
 
     public Ammunition[] sortAmmunitionByCost(Ammunition[] originalAmmunitionArray) {
         return sortAmmunition(originalAmmunitionArray, new CostComparator());

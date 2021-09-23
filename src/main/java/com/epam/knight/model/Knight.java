@@ -20,9 +20,9 @@ public class Knight {
      */
     public void equip(Ammunition element) {
         int ammunitionArrayLength = ammunition.length;
-        Ammunition[] addAmmunition = Arrays.copyOf(ammunition, ammunitionArrayLength + 1);
-        addAmmunition[ammunitionArrayLength] = element;
-        this.ammunition = addAmmunition;
+        Ammunition[] addedAmmunition = Arrays.copyOf(ammunition, ammunitionArrayLength + 1);
+        addedAmmunition[ammunitionArrayLength] = element;
+        this.ammunition = addedAmmunition;
     }
 
     public int calculateAmmunitionWeight() {

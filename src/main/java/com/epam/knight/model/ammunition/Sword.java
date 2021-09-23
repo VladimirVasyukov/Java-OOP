@@ -1,9 +1,7 @@
 package com.epam.knight.model.ammunition;
 
-public class Sword implements Ammunition {
+public class Sword extends AmmunitionParameters implements Ammunition {
 
-    private final int weight;
-    private final int cost;
     private final int damage;
 
     public Sword(int weight, int cost, int damage) {

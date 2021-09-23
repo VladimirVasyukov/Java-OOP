@@ -3,7 +3,7 @@ package com.epam.knight.controller;
 import com.epam.knight.model.Knight;
 import com.epam.knight.model.ammunition.Ammunition;
 import com.epam.knight.model.ammunition.Helmet;
-import com.epam.knight.model.ammunition.SortAmmunition;
+import com.epam.knight.model.ammunition.SortedAmmunition;
 import com.epam.knight.model.ammunition.Sword;
 import com.epam.knight.view.ConsoleView;
 
@@ -101,13 +101,13 @@ public class KnightController {
     public void sortAmmunition(Ammunition[] ammunition) {
         consoleView.printSortTypeRequest();
         int chosenSortType = Integer.parseInt(controllerScanner.nextLine());
-        SortAmmunition sortAmmunition = new SortAmmunition();
+        SortedAmmunition sortedAmmunition = new SortedAmmunition();
         switch (chosenSortType) {
             case SORT_BY_COST:
-                consoleView.printAmmunition(sortAmmunition.sortAmmunitionByCost(ammunition));
+                consoleView.printAmmunition(sortedAmmunition.sortAmmunitionByCost(ammunition));
                 break;
             case SORT_BY_WEIGHT:
-                consoleView.printAmmunition(sortAmmunition.sortAmmunitionByWeight(ammunition));
+                consoleView.printAmmunition(sortedAmmunition.sortAmmunitionByWeight(ammunition));
                 break;
             default:
                 consoleView.printMessage(ConsoleView.SORT_TYPE_ERROR);
