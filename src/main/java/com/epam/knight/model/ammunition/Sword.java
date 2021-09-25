@@ -1,6 +1,6 @@
 package com.epam.knight.model.ammunition;
 
-public class Sword extends AmmunitionParameters implements Ammunition {
+public class Sword extends AmmunitionParameters {
 
     private final int damage;
 
@@ -8,16 +8,6 @@ public class Sword extends AmmunitionParameters implements Ammunition {
         this.weight = weight;
         this.cost = cost;
         this.damage = damage;
-    }
-
-    @Override
-    public int getWeight() {
-        return weight;
-    }
-
-    @Override
-    public int getCost() {
-        return cost;
     }
 
     public int getDamage() {
