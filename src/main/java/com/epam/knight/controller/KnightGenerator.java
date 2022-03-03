@@ -12,10 +12,10 @@ import java.io.IOException;
 
 public final class KnightGenerator {
     private static final byte AMMUNITION_TYPE = 0;
-    private static final byte WEIGHT = 1;
-    private static final byte COST = 2;
-    private static final byte DAMAGE = 3;
-    private static final byte PROTECTION = 3;
+    private static final byte WEIGHT = 2;
+    private static final byte COST = 3;
+    private static final byte DAMAGE = 1;
+    private static final byte PROTECTION = 1;
     private static final String SWORD = "Sword";
     private static final String HELMET = "Helmet";
     private static final String FILE_KNIGHT = "src/main/java/com/epam/knight/model/Knight.txt";
@@ -38,16 +38,16 @@ public final class KnightGenerator {
                 while (line != null) {
                     String[] ammunition = line.split("-");
                     if (ammunition[AMMUNITION_TYPE].equals(SWORD)) {
+                        int damage = Integer.parseInt(ammunition[DAMAGE].trim());
                         int weight = Integer.parseInt(ammunition[WEIGHT].trim());
                         int cost = Integer.parseInt(ammunition[COST].trim());
-                        int damage = Integer.parseInt(ammunition[DAMAGE].trim());
-                        knight.equip(new Sword(weight, cost, damage));
+                        knight.equip(new Sword(damage, weight, cost));
                     }
                     if (ammunition[AMMUNITION_TYPE].equals(HELMET)) {
+                        int protection = Integer.parseInt(ammunition[PROTECTION].trim());
                         int weight = Integer.parseInt(ammunition[WEIGHT].trim());
                         int cost = Integer.parseInt(ammunition[COST].trim());
-                        int protection = Integer.parseInt(ammunition[PROTECTION].trim());
-                        knight.equip(new Helmet(weight, cost, protection));
+                        knight.equip(new Helmet(protection, weight, cost));
                     }
                     line = reader.readLine();
                 }

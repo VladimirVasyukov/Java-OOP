@@ -88,10 +88,10 @@ public class KnightController {
 
         if (ammunitionType.equals(ConsoleView.SWORD)) {
             int damage = scanInputInt(ammunitionType, ConsoleView.DAMAGE);
-            knight.equip(new Sword(weight, cost, damage));
+            knight.equip(new Sword(damage, weight, cost));
         } else {
             int protection = scanInputInt(ammunitionType, ConsoleView.PROTECTION);
-            knight.equip(new Helmet(weight, cost, protection));
+            knight.equip(new Helmet(protection, weight, cost));
         }
     }
 
